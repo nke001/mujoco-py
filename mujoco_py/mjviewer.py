@@ -158,7 +158,7 @@ class MjViewer(MjViewerBasic):
 
         # this variable is estamated as a running average.
         self._time_per_render = 1 / 60.0
-        self._hide_overlay = False  # hide the entire overlay.
+        self._hide_overlay = True  # hide the entire overlay.
         self._user_overlay = {}
 
     def render(self):
