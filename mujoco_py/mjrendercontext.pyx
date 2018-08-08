@@ -137,10 +137,10 @@ cdef class MjRenderContext(object):
             new_width = max(width, self._model_ptr.vis.global_.offwidth)
             new_height = max(height, self._model_ptr.vis.global_.offheight)
             self.update_offscreen_size(new_width, new_height)
-
+        import ipdb; ipdb.set_trace()
         if camera_id is not None:
             if camera_id == -1:
-                self.cam.type = const.CAMERA_FREE
+                self.cam.type = const.CAMERA_TRACKING
             else:
                 self.cam.type = const.CAMERA_TRACKING
             self.cam.fixedcamid = camera_id
