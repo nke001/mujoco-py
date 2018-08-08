@@ -144,7 +144,7 @@ cdef class MjSim(object):
             camera_id = None
         else:
             camera_id = self.model.camera_name2id(camera_name)
-
+        import ipdb; ipdb.set_trace()
         if mode == 'offscreen':
             with _MjSim_render_lock:
                 if self._render_context_offscreen is None:
