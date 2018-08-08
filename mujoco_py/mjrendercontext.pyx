@@ -142,7 +142,7 @@ cdef class MjRenderContext(object):
             if camera_id == -1:
                 self.cam.type = const.CAMERA_FREE
             else:
-                self.cam.type = const.CAMERA_FIXED
+                self.cam.type = const.CAMERA_TRACKING
             self.cam.fixedcamid = camera_id
 
         self.opengl_context.set_buffer_size(width, height)
