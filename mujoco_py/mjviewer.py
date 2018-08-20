@@ -160,7 +160,9 @@ class MjViewer(MjViewerBasic):
         self._time_per_render = 1 / 60.0
         self._hide_overlay = True  # hide the entire overlay.
         self._user_overlay = {}
-
+        camera_id = 0 #self.model.camera_name2id('track')
+        self.cam.type = 2
+        self.cam.fixedcamid = camera_id
     def render(self):
         """
         Render the current simulation state to the screen or off-screen buffer.
