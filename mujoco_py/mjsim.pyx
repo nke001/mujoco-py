@@ -140,6 +140,9 @@ cdef class MjSim(object):
         - depth (float array): depth buffer from camera (only returned
             if depth=True)
         """
+        # adding tracking as camera_name
+        camera_name = 'tracking'
+
         if camera_name is None:
             camera_id = None
         else:
