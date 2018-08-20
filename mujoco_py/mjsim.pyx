@@ -141,12 +141,13 @@ cdef class MjSim(object):
             if depth=True)
         """
         # adding tracking as camera_name
-        camera_name = 'tracking'
+        camera_name = 'track'
 
         if camera_name is None:
             camera_id = None
         else:
             camera_id = self.model.camera_name2id(camera_name)
+        print('camera id is ', camera_id)
         if mode == 'offscreen':
             with _MjSim_render_lock:
                 if self._render_context_offscreen is None:
