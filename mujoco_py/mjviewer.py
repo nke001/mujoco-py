@@ -160,9 +160,7 @@ class MjViewer(MjViewerBasic):
         self._time_per_render = 1 / 60.0
         self._hide_overlay = True  # hide the entire overlay.
         self._user_overlay = {}
-        camera_id = 0 #self.model.camera_name2id('track')
-        self.cam.type = 2
-        self.cam.fixedcamid = camera_id
+    
     def render(self):
         """
         Render the current simulation state to the screen or off-screen buffer.
@@ -330,8 +328,6 @@ class MjViewer(MjViewerBasic):
             self._image_idx += 1
         elif key == glfw.KEY_I:  # drops in debugger.
             print('You can access the simulator by self.sim')
-            import ipdb
-            ipdb.set_trace()
         elif key == glfw.KEY_S:  # Slows down simulation.
             self._run_speed /= 2.0
         elif key == glfw.KEY_F:  # Speeds up simulation.
