@@ -141,7 +141,7 @@ cdef class MjSim(object):
             if depth=True)
         """
         # adding tracking as camera_name
-        camera_name = 'track'
+        #camera_name = 'track'
 
         if camera_name is None:
             camera_id = None
